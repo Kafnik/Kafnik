@@ -14,12 +14,14 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: Platane/snk/svg-only@v3
+      - uses: Platane/snk/svg-only@v3.3.0
         with:
           github_user_name: Kafnik
-          # Эта настройка сделает змейку фиолетовой, а пустые клетки — темными
           outputs: |
-            dist/github-contribution-grid-snake.svg?palette=github-dark&color_snake=#8a2be2
+            # Светлая тема: обычная змейка
+            dist/github-contribution-grid-snake.svg
+            # Темная тема: как на твоем скриншоте (темный фон, яркая змейка)
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#8a2be2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
