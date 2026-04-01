@@ -1,3 +1,1 @@
-Hi my name Kafnik
-
 ![Snake animation](https://github.com/Kafnik/Kafnik/blob/output/github-contribution-grid-snake.svg)
