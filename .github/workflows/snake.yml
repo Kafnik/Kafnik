@@ -1,4 +1,4 @@
-name: Generate Snake
+\name: Generate Snake
 
 on:
   schedule:
@@ -17,7 +17,9 @@ jobs:
       - uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Kafnik
-          outputs: dist/github-contribution-grid-snake.svg
+          # Вот здесь мы заставляем робота использовать зелёный цвет для змейки!
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color_snake=green&color_dots=#bfdbfe,#ca8a04,#166534,#15803d,#16a34a
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: crazy-max/ghaction-github-pages@v3.1.0
